@@ -21,7 +21,7 @@
                     <br><br>
                     <input type="hidden" name="envio">
                     <p><input type="submit" id="enviar" class="btn btn-success" value="INICIAR SESIÓN" name="btn_index">
-                        <a class="btn btn btn-danger" href="Formulario.php" role="button">REGISTRARSE</a>
+                        <a class="btn btn btn-danger" href="http://localhost/Novacel/?controller=admit&accion=crear" role="button">REGISTRARSE</a>
                     </p>
                 </form>
         </div>

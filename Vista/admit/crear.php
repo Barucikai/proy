@@ -1,32 +1,56 @@
-<div class="card">
-    <div class="card-header">
-        Agregar servicio
-    </div>
-    <div class="card-body">
-        <!-- -->
-        <form action="" method="POST">
-            <!-- -->
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre:</label>
-                <input required type="text" class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Nombre del servios">
-            </div>
-            <!-- -->
-            <!-- -->
-            <div class="mb-3">
-                <label for="descripcion" class="form-label">Descripcion:</label>
-                <textarea required class="form-control" name="descripcion" id="descripcion" rows="3"></textarea>
-            </div>
-            <!-- -->
-            <!-- -->
-            <div class="mb-3">
-                <label for="redes" class="form-label">Redes sociales:</label>
-                <input required type="text" class="form-control" name="redes" id="redes" aria-describedby="helpId" placeholder="Redes sociales">
-            </div>
-            <!-- -->
-            <!-- -->
-            <input name="" id="" class="btn" type="submit" value="Ingresar servicio">
-            <!-- -->
-        </form>
-        <!-- -->
-    </div>
-</div>
+<main>
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <center>
+                <h1>Registro de usuario</h1>
+            </center>
+            <form action="" method="POST">
+                <!-- -->
+                <div class="form-group">
+                    <label for="usur" class="form-label">Usuario:</label>
+                    <input required type="text" class="form-control" name="usur" id="usur" aria-describedby="helpId" placeholder="Nombre de avatar">
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input required type="text" class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Nombre">
+                </div>
+                <!-- -->
+                <!-- -->
+
+                <div class="form-group">
+                    <label for="contra" class="form-label">contraseña:</label>
+                    <input required type="text" class="form-control" name="contra" id="contra" aria-describedby="helpId" placeholder="Telefono">
+                </div>
+
+                <div class="form-group">
+                    <label for="tele" class="form-label">Telefono:</label>
+                    <input required type="text" class="form-control" name="tele" id="tele" aria-describedby="helpId" placeholder="Telefono">
+                </div>
+                <!-- -->
+                <!-- -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Email:</label>
+                    <input required type="text" class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="rol_id" class="form-label">seleciona el ROL</label>
+                    <select class="form-control" name="rol_id" id="rol_id" aria-describedby="helpId" placeholder="Email">
+                        <option>seleciona el ROL</option>
+                    </select>
+                </div>
+                <!-- -->
+                <!-- -->
+                <center>
+                    <input name="" id="" class="btn btn-success" type="submit" value="Enviar">
+                </center>
+
+                <!-- -->
+            </form>
+
+            <hr>
+            <br>
+        </div>

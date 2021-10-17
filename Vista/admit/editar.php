@@ -1,40 +1,65 @@
-<div class="card">
-    <div class="card-header">
-        Agregar servicio
-    </div>
-    <div class="card-body">
-        <!-- -->
-        <form action="" method="POST">
-            <!--TODO: -->
-            <div class="mb-3">
-                <label for="id" class="form-label">ID</label>
-                <?php var_dump($servicio); ?>
-                <input class="form-control" value="<?php echo $servicio->id; ?>" name="id" id="id" aria-describedby="helpId" placeholder="ID servicios">
+        <main>
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <h1>Registro de usuario</h1>
+                    </center>
+                    <form action="" method="POST">
+                        <!-- -->
+                        <div class="form-group">
+                            <label for="id" class="form-label">ID;</label>
+                            <input required type="text" class="form-control" value="<?php echo $registro->id; ?>" name="id" id="id" aria-describedby="helpId" placeholder="ID servicios">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="usur" class="form-label">Usuario:</label>
+                            <input required type="text" class="form-control" value="<?php echo $registro->usuario; ?>" name="usur" id="usur" aria-describedby="helpId" placeholder="usuario">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input required type="text" class="form-control" value="<?php echo $registro->nombre; ?>" name="nombre" id="nombre" aria-describedby="helpId" placeholder="nombre">
+                        </div>
+                        <!-- -->
+                        <!-- -->
+
+                        <div class="form-group">
+                            <label for="contra" class="form-label">contraseña:</label>
+                            <input required type="text" class="form-control" value="<?php echo $registro->contrasena; ?>" name="contra" id="contra" aria-describedby="helpId" placeholder="contra">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tele" class="form-label">Telefono:</label>
+                            <input required type="text" class="form-control" value="<?php echo $registro->telefono; ?>" name="tele" id="tele" aria-describedby="helpId" placeholder="tele">
+                        </div>
+                        <!-- -->
+                        <!-- -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email:</label>
+                            <input required type="text" class="form-control" value="<?php echo $registro->email; ?>" name="email" id="email" aria-describedby="helpId" placeholder="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label value="<?php echo $registro->rol; ?>" for="rol" class="form-label">seleciona el ROL</label>
+                            <select class="form-control" value="<?php echo $registro->rol; ?>" name="rol" id="rol" aria-describedby="helpId" placeholder="Email">
+                                <option>seleciona el ROL</option>
+                            </select>
+                            <!-- -->
+                            <!-- -->
+                            <center>
+                                <input name="" id="" class="btn btn-success" type="submit" value="Enviar">
+                                <a name="Volver" id="Volver" class="btn btn-danger" href="?controller=admit&accion=inicio" " role=" button">Volver</a>
+                            </center>
+
+                            <!-- -->
+                    </form>
+
+                    <hr>
+                    <br>
+                </div>
+                <!-- -->
             </div>
-            <!-- -->
-            <!--TODO: -->
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre:</label>
-                <input required type="text" value="<?php echo $servicio->nombre; ?>" class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Nombre del servios">
             </div>
-            <!-- -->
-            <!-- -->
-            <div class="mb-3">
-                <label for="descripcion" class="form-label">Descripcion:</label>
-                <input required type="text" class="form-control" name="descripcion" id="descripcion" rows="3" value="<?php echo $servicio->descripcion; ?>"></input>
-            </div>
-            <!-- -->
-            <!-- -->
-            <div class="mb-3">
-                <label for="redes" class="form-label">Redes sociales:</label>
-                <input required type="text" value="<?php echo $servicio->redes; ?>" class="form-control" name="redes" id="redes" aria-describedby="helpId" placeholder="Redes sociales">
-            </div>
-            <!-- -->
-            <!-- -->
-            <input name="" id="" class="btn" type="submit" value="Editar campos">
-            <a name="Volver" id="Volver" class="btn" href="?controller=admit&accion=inicio" " role=" button">Volver</a>
-            <!-- -->
-        </form>
-        <!-- -->
-    </div>
-</div>

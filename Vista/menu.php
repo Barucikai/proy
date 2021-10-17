@@ -2,8 +2,8 @@
     <a href="../Index.php">Inicio</a>
     <a href="Registro_productos.php">Registra tu dispositivo</a>
     <a href="Productos.php">Productos</a>
-    <a href="login.php">Login</a>
-    <a href="Formulario.php">Registrarse</a>
+    <a href="index.php">Login</a>
+    <a href="?controller=admit&accion=crear">Registrarse</a>
     <a href=""></a>
     <img src="../img/logo.png" width="250" height="150" BORDER="" align="right">
     <div class="login">

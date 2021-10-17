@@ -8,10 +8,12 @@ class registros
     public $contrasena;
     public $telefono;
     public $email;
+    public $rol;
 
-    public function __construct($id, $usuario, $nombre, $contrasena, $telefono, $email)
+    public function __construct($id, $rol, $usuario, $nombre, $contrasena, $telefono, $email)
     {
         $this->id = $id;
+        $this->rol = $rol;
         $this->usuario = $usuario;
         $this->nombre = $nombre;
         $this->contrasena = $contrasena;
@@ -23,46 +25,52 @@ class registros
     {
         $listaRegistros = [];
         $conexionBD = BD::crearInstacia();
-        $sql = $conexionBD->query("SELECT * FROM registro");
-        foreach ($sql->fetchAll() as $registroz) {
-            $listaRegistros[] = new registros($registroz['Id_Registro'], $registroz['Usuario'], $registroz['Contrasena'], $registroz['Telefono'], $registroz['Email']);
+        $sql = $conexionBD->query("SELECT * FROM registro_u");
+        foreach ($sql->fetchAll() as $registro) {
+            $listaRegistros[] = new registros($registro['Id_Registro'], $registro['id_roles'], $registro['Usuario'], $registro['Nombre'], $registro['Contrasena'], $registro['Telefono'], $registro['Email']);
         }
         return $listaRegistros;
     }
 
-    /*
 
-    public static function crear($nombre, $descripcion, $redes)
+
+    public static function crear($rol, $usuario, $nombre, $contrasena, $telefono, $email)
     {
         $conexionBD = BD::crearInstacia();
         var_dump($conexionBD);
 
-        $sql = $conexionBD->prepare("INSERT INTO servicios(nombre_ser, descripcion_ser, redes_ser) VALUES (?,?,?)");
-        $sql->execute(array($nombre, $descripcion, $redes));
+        $sql = $conexionBD->prepare("INSERT INTO registro_u(id_roles, Usuario, Nombre, Contrasena, Telefono, Email) VALUES (?,?,?,?,?,?)");
+        $sql->execute(array($usuario, $nombre, $contrasena, $telefono, $email));
     }
     public static function borrar($id)
     {
         $conexionBD = BD::crearInstacia();
-        $sql = $conexionBD->prepare(" DELETE FROM servicios WHERE id_ser =?");
+        $sql = $conexionBD->prepare(" DELETE FROM registro_u WHERE Id_Registro =?");
         $sql->execute(array($id));
     }
     public static function buscar($id)
     {
         $conexionBD = BD::crearInstacia();
 
-        $sql = $conexionBD->prepare("SELECT * FROM servicios WHERE id_ser=?");
+        $sql = $conexionBD->prepare("SELECT * FROM registro_u WHERE Id_Registro=?");
         $sql->execute(array($id));
-        $servicios = $sql->fetch();
-        return new servicio($servicios['id_ser'], $servicios['nombre_ser'], $servicios['descripcion_ser'], $servicios['redes_ser']);
+        $registro = $sql->fetch();
+        return new registros($registro['Id_Registro'], $registro['id_roles'], $registro['Usuario'], $registro['Nombre'], $registro['Contrasena'], $registro['Telefono'], $registro['Email']);
     }
-    public static function editar($id, $nombre, $descripcion, $redes)
+
+    public static function editar($id, $rol, $usuario, $nombre, $contrasena, $telefono, $email)
     {
-        //Realiza la conexion
         $conexionBD = BD::crearInstacia();
-        //inicia la conexion /luego prepara la sintaxis de MYSQL para relizar la actualizacion. | pregunta nombre  = ? que esoara le llamod de $_POST
-        $sql = $conexionBD->prepare("UPDATE servicios SET nombre_ser=?, descripcion_ser=?, redes_ser=? WHERE id_ser=?");
-        //Ejecuta la intrucon y la guarda en un ARREGLO para lugo enviara al controlador
-        $sql->execute(array($nombre, $descripcion, $redes, $id));
+        $sql = $conexionBD->prepare("UPDATE registro_u SET Id_Registro=?, id_roles=?, Usuario=?, Nombre=?, Contrasena=?, Telefono=?, Email=?  WHERE Id_Registro=?");
+        $sql->execute(array($rol, $usuario, $nombre, $contrasena, $telefono, $email, $id));
     }
-    */
+
+    public static function login()
+    {
+        $conexionBD = BD::crearInstacia();
+        $sql = $conexionBD->prepare("SELECT * FROM registro_u WHERE Usuario = :usuario AND Contrasena = :contrasena");
+        $sql->execute(array($id));
+        $registro = $sql->fetch();
+        return new registros($registro['Id_Registro'], $registro['id_roles'], $registro['Usuario'], $registro['Nombre'], $registro['Contrasena'], $registro['Telefono'], $registro['Email']);
+    }
 }
