@@ -1,0 +1,18 @@
+LINK DE USUARIO 
+//////////////////////////////////
+
+localhost/Novacel/Index.php?controller=admit&accion=inicio
+
+localhost/Novacel/Index.php?controller=admit&accion=crear
+
+localhost/Novacel/Index.php?controller=admit&accion=editar&id=1
+
+//////////////////////////////////
+LINK DE PRODUCTOS
+//////////////////////////////////
+
+localhost/Novacel/Index.php?controller=prod&accion=inicio
+
+localhost/Novacel/Index.php?controller=prod&accion=crear
+
+localhost/Novacel/Index.php?controller=prod&accion=editar&id=1

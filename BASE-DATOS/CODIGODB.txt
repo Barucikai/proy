@@ -1,0 +1,66 @@
+creacion base de datos
+..........................................
+CREATE DATABASE novacel2;
+
+USE novacel2;
+.......................................
+Tabla Registro producto
+.......................................
+CREATE TABLE registro_p (
+    Id_Registro_p INT NOT NULL AUTO_INCREMENT, 
+    Nombre VARCHAR (100) NOT NULL, 
+    Descripcion VARCHAR (100) NOT NULL, 
+    foto VARCHAR (50) NOT NULL, 
+    PRIMARY KEY (Id_Registro_p)
+);
+........................................
+Tabla R_Usuario 
+........................................
+CREATE TABLE registro (
+    Id_Registro INT NOT NULL AUTO_INCREMENT, 
+    Usuario VARCHAR (100) NOT NULL, 
+    Nombre VARCHAR (100) NOT NULL,
+    Contrasena VARCHAR (100) NOT NULL,
+    Telefono VARCHAR (50) NOT NULL,
+    Email VARCHAR (50) NOT NULL,
+    PRIMARY KEY (Id_Registro)
+);
+/////////////////////////////////////////////////////////////
+insert datos tabala Registro producto
+////////////////////////////////////////////////////////////
+
+
+INSERT INTO `registro_p` (`Id_Registro_p`, `Nombre`, `Descripcion`, `foto`) 
+VALUES (NULL, 'Samsung Galaxy S20', 'El Galaxy S20 cuenta con 8GB de memoria 
+RAM para la variante LTE y 12GB de memoria RAM para la versión 5G, y 128GB de 
+almacenamiento interno, expandible vía microSD. La cámara posterior del Galaxy 
+S20 es triple, con una configuración 12 MP + 12 MP + 64 MP, mientras que la 
+cámara para selfies es de 10 megapixels.', 'SAMSUND.PNG');
+
+
+INSERT INTO `registro_p` (`Id_Registro_p`, `Nombre`, `Descripcion`, `foto`) 
+VALUES (NULL, 'Moto E', 'El Teléfono móvil Moto E es un teléfono inteligente 
+de gama baja, desarrollado y fabricado por Motorola. Es parte de la familia 
+Moto, formada por el Moto G, el Moto X, el Moto Z y el Moto C. Fue presentado 
+en mayo de 2014.', 'moto.png');
+
+/////////////////////////////////////////////////////////////
+insert datos tabala Registro Usuario
+////////////////////////////////////////////////////////////
+
+INSERT INTO `registro` (`Id_Registro`, `Usuario`, `Nombre`, `Contrasena`, 
+`Telefono`, `Email`) VALUES (NULL, 'Andresmovil', 'Andres camilo', '123', 
+'57395683921', 'andres12@gmail.com');
+
+INSERT INTO `registro` (`Id_Registro`, `Usuario`, `Nombre`, `Contrasena`, 
+`Telefono`, `Email`) VALUES (NULL, 'Albana12', 'Albana', '3282482726dskf', 
+'57395683921', 'Albana15@gmail.com');
+
+INSERT INTO `registro` (`Id_Registro`, `Usuario`, `Nombre`, `Contrasena`, 
+`Telefono`, `Email`) VALUES (NULL, 'Silvana090912', 'Silvana', 'sd12312Silvana ', 
+'57395683921', 'Silvana._32@gmail.com');
+
+INSERT INTO `registro` (`Id_Registro`, `Usuario`, `Nombre`, `Contrasena`, 
+`Telefono`, `Email`) VALUES (NULL, 'Alexander98RW', 'Alexander', 'Alexa21221', 
+'57395683921', 'Alexander-12@gmail.com');
+
