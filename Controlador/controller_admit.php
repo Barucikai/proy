@@ -15,20 +15,17 @@ class ControllerAdmit
         include_once("vista/admit/inicio.php");
     }
 
-
-
     public function crear()
 
     {
         if ($_POST) {
-            $rol = $_POST['rol'];
+            print_r($_POST);
             $usuario = $_POST['usur'];
             $nombre = $_POST['nombre'];
             $contrasena = $_POST['contra'];
             $telefono = $_POST['tele'];
             $email = $_POST['email'];
-            registros::crear($rol, $usuario, $nombre, $contrasena, $telefono, $email);
-            //TODO: direcionar a la vista :inicio
+            registros::crear($usuario, $nombre, $contrasena, $telefono, $email);
             header("Location:./?controller=admit&accion=inicio");
         }
         include_once("vista/admit/crear.php");
@@ -41,20 +38,17 @@ class ControllerAdmit
 
         if ($_POST) {
             $id = $_POST['id'];
-            $rol = $_POST['rol'];
             $usuario = $_POST['usur'];
             $nombre = $_POST['nombre'];
             $contrasena = $_POST['contra'];
             $telefono = $_POST['tele'];
             $email = $_POST['email'];
-            registros::crear($rol, $usuario, $nombre, $contrasena, $telefono, $email, $id);
+            registros::editar($id, $usuario, $nombre, $contrasena, $telefono, $email);
         }
         $id = $_GET['id'];
         $registro = registros::buscar($id);
         include_once("vista/admit/editar.php");
     }
-
-
 
     public function borrar()
     {

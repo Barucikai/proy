@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NOVACEL</title>
     <link rel="shortcut icon" href="img/alexcgdesign.png" type="image/x-icon">
-    <link rel="stylesheet" href="3dc.css">
+    <link rel="stylesheet" href="../css/3dc.css">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
 </head>

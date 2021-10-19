@@ -41,20 +41,14 @@
                             <label for="email" class="form-label">Email:</label>
                             <input required type="text" class="form-control" value="<?php echo $registro->email; ?>" name="email" id="email" aria-describedby="helpId" placeholder="email">
                         </div>
+                        <!-- -->
+                        <!-- -->
+                        <center>
+                            <input name="" id="" class="btn btn-success" type="submit" value="Enviar">
+                            <a name="Volver" id="Volver" class="btn btn-danger" href="?controller=admit&accion=inicio" " role=" button">Volver</a>
+                        </center>
 
-                        <div class="form-group">
-                            <label value="<?php echo $registro->rol; ?>" for="rol" class="form-label">seleciona el ROL</label>
-                            <select class="form-control" value="<?php echo $registro->rol; ?>" name="rol" id="rol" aria-describedby="helpId" placeholder="Email">
-                                <option>seleciona el ROL</option>
-                            </select>
-                            <!-- -->
-                            <!-- -->
-                            <center>
-                                <input name="" id="" class="btn btn-success" type="submit" value="Enviar">
-                                <a name="Volver" id="Volver" class="btn btn-danger" href="?controller=admit&accion=inicio" " role=" button">Volver</a>
-                            </center>
-
-                            <!-- -->
+                        <!-- -->
                     </form>
 
                     <hr>

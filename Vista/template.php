@@ -24,13 +24,52 @@
 <body>
     <header>
 
-        <body>
-            <?php
-            include_once("vista/menu.php");
-            ?>
-            <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                    <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(253, 253, 253);"></path>
-                </svg></div>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="Index.php">Inicio</a></li>
+                        <li><a href="vista/vision.php">Empresa</a></li>
+                        <li><a href="?controller=prod&accion=inicio">Productos</a></li>
+                        <li><a href="?controller=prod&accion=crear">Registra tu dispositivo</a></li>
+                    </ul>
+                    <img src="img/logo.png" width="10%" height="10%" BORDER="" align="right">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="vista/login.php">Ingresar</a></li>
+                        <li><a href="?controller=admit&accion=crear">Registrarse</a></li>
+
+                    </ul>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <font color="white">
+                        <font-size></font-size>
+                        <center><strong>
+                                <h1>NOVACEL </h1>
+                            </strong>
+                            <h3>Deja tu celular en buenas manos</h3>
+                        </center>
+                    </font>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 80" preserveAspectRatio="none" style="height: 100%; width:100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(253, 253, 253);"></path>
+            </svg>
+        </div>
+
     </header>
 
 
@@ -111,7 +150,7 @@
                         </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="vivoY20s.gif" alt="">
+                        <img src="img/vivoY20s.gif" alt="">
                         <div class="hover-galeria">
                             <img src="img/icono1.png" alt="">
                             <a href="Vivo.html">
@@ -193,7 +232,7 @@
         </section>
     </main>
 
-    <?php include_once("vista/pie.php") ?>
+    <?php include_once("diseño/pie.php") ?>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>

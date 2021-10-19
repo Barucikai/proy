@@ -36,12 +36,6 @@
                     <label for="email" class="form-label">Email:</label>
                     <input required type="text" class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="Email">
                 </div>
-                <div class="form-group">
-                    <label for="rol_id" class="form-label">seleciona el ROL</label>
-                    <select class="form-control" name="rol_id" id="rol_id" aria-describedby="helpId" placeholder="Email">
-                        <option>seleciona el ROL</option>
-                    </select>
-                </div>
                 <!-- -->
                 <!-- -->
                 <center>

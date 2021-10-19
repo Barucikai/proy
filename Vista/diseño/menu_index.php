@@ -24,4 +24,5 @@
                         <a class="btn btn btn-danger" href="Formulario.php" role="button">REGISTRARSE</a>
                     </p>
                 </form>
+                <center>
         </div>
